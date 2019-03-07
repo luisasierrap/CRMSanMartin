@@ -1,0 +1,29 @@
+.containter{
+
+
+border: 1px solid chartreuse;
+justify-content: center;
+flex:end;
+}
+
+.header{
+
+    display:flex;
+    background-color:lawngreen;
+}   
+.content{
+   
+    display:flex;
+    background-color: aquamarine;
+   
+}
+.content2{
+    display:flex;
+    background-color: brown;
+}
+.footer{
+    display:flex;
+    background-color:darkcyan;
+}
+
+
