@@ -1,29 +1,38 @@
-.containter{
-
-
-border: 1px solid chartreuse;
+.container{
+display:flex;
+border:aquamarine;
+max-width:100%;
 justify-content: center;
-flex:end;
+flex-direction:column;
+margin-block-end: 10%;
 }
 
 .header{
-
+    width:20%;
     display:flex;
-    background-color:lawngreen;
+    background-color:royalblue;
+    flex:1;
+    margin-block-end: 10px;
+  
 }   
 .content{
    
     display:flex;
     background-color: aquamarine;
+    flex:1;
+    flex-direction: column-reverse;
    
 }
 .content2{
     display:flex;
     background-color: brown;
+    flex:1;
 }
 .footer{
     display:flex;
     background-color:darkcyan;
+    flex:end;
+    flex:1;
 }
 
 
