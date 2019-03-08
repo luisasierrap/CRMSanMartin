@@ -8,11 +8,10 @@ margin-block-end: 10%;
 }
 
 .header{
-    width:20%;
     display:flex;
     background-color:royalblue;
     flex:1;
-    margin-block-end: 10px;
+    margin-block-end: 10%;
   
 }   
 .content{
@@ -21,6 +20,7 @@ margin-block-end: 10%;
     background-color: aquamarine;
     flex:1;
     flex-direction: column-reverse;
+    margin-block-end: 20%;
    
 }
 .content2{
