@@ -10,16 +10,18 @@
 }   
 
 .imgMain{
-    display:flex;
     height: 65%;
     margin: 1% 15%;
-    background-color: brown;
+}
+
+.imgMain .carousel .carousel-item{
+    width:40%;
 }
 .footer{
     display: flex;
     height: 20%;
-    background-color:darkcyan;
-    
+    background-color:#09448df5;
+    justify-content: space-between;
 }
 .logo-img{
     width: 45%;
@@ -27,6 +29,9 @@
 .azul-text{
     color: #09458d !important;
     font-family: 'Comfortaa', cursive;
+}
+.azul-icon{
+    color: #09458d !important;
 }
 .azul{
     background-color: #09458d !important;
@@ -40,4 +45,17 @@
     position: fixed;
     width: 100%;
     z-index: -100;
+}
+.data-text{
+    font-family: 'Comfortaa', cursive;
+    color: #fff;
+}
+.img-mobile{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: auto;
+}
+.img-mobile img{
+    width: 80%;
 }
