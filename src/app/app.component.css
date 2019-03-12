@@ -49,6 +49,7 @@
 .data-text{
     font-family: 'Comfortaa', cursive;
     color: #fff;
+
 }
 .img-mobile{
     display: flex;
@@ -59,6 +60,9 @@
 .img-mobile img{
     width: 80%;
 }
-.social-icon {
-    width: 80%;
+
+.redes-container{
+   font-size:150%;
 }
+
+
