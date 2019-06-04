@@ -1,0 +1,40 @@
+<div class='container form'>
+  <div class="card">
+    <div class="card-content">
+      <div class="row">
+        <div class="input-field col s6">
+          <select class="browser-default" [(ngModel)]="cita.IDPaciente">
+            <option value="0" disabled selected>Seleccione Paciente</option>
+            <option *ngFor="let paciente of opcionesPaciente"  value="{{paciente.idpaciente}}" >{{paciente.nombrePaciente}}</option>
+          </select>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <select class="browser-default" [(ngModel)]="cita.IDOdontologo">
+              <option value="0" disabled selected>Seleccione Odontólogo</option>
+              <option *ngFor="let odontologo of opcionesOdontologo" value="{{odontologo.idodontologo}}" >{{odontologo.nombreOdontologo}}</option>
+            </select>
+          </div>
+        </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input [(ngModel)]="cita.Fecha" type="text" id="fecha" class="datepicker">
+                <label for="fecha">Seleccione Fecha</label>
+              </div>
+            <div class="row">
+              <div class="input field col s6">
+                  <input [(ngModel)]="cita.Hora" type="text" id="hora" class="timepicker">
+                  <label for="hora">Seleccione Hora</label>
+              </div>
+            </div>
+            </div>
+
+            <div class="row">
+              <button [routerLink]="[ '../crearCita']"  (click)="guardarCita()" class="btn waves-effect waves-light" type="submit" name="action">Crear Cita
+                <i class="material-icons right">send</i>
+              </button>
+            </div>
+    </div>
+    </div>
+     
+</div>

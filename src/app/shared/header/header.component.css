@@ -1,0 +1,17 @@
+ 
+ .center-logo{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+ .logo-img{
+    width: 45%;
+}
+.azul-icon{
+    color: #09458d !important;
+}
+
+.azul-text{
+    color: #09458d !important;
+    font-family: 'Comfortaa', cursive;
+}

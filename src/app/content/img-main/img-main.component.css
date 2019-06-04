@@ -1,0 +1,31 @@
+.imgMain{
+    height: 100%;
+    margin: 1% 15%;
+}
+
+.imgMain .carousel .carousel-item{
+    width:40%;
+}
+
+.img-mobile{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: auto;
+}
+
+.img-mobile img{
+    width: 80%;
+}
+
+@media only screen and (max-width:420px){
+    .img-mobile img{
+        width: 100%;
+    }
+    .imgMain {
+        margin:0;
+    }
+    .logo-img{
+        width: 100%;
+    }
+}

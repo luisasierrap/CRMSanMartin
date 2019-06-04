@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  // backEndBasedURL:'https://sanmartincrm.000webhostapp.com/'
+  backEndBasedURL:'http://localhost:8000'
 };
 
 /*

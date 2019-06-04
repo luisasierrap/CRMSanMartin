@@ -3,63 +3,11 @@
 </video>
 
 <div class="container">
-  <div class="header">
-    <nav>
-        <div class="nav-wrapper white">
-          <a href="#!" class="brand-logo center-logo">
-              <img src="assets/img/logo.jpg.jpg" alt="San Martin" class="logo-img">
-          </a>
-          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons azul-icon">menu</i></a>
-          <ul class="right hide-on-med-and-down">
-              <li><a href="#" class="azul-text">Citas</a></li>
-              <li><a href="#" class="azul-text">Acerca de</a></li>
-              <li><a href="#" class="azul-text">Servicios</a></li>
-          </ul>
-        </div>
-      </nav>
-    
-      <ul class="sidenav" id="mobile-demo">
-          <li><a href="#" class="azul-text">Citas</a></li>
-          <li><a href="#" class="azul-text">Acerca de</a></li>
-          <li><a href="#" class="azul-text">Servicios</a></li>
-      </ul>
-  </div>
+  <app-header class="appheader-component"></app-header>
+  
+    <router-outlet>
+     <!--  <app-img-main class="appimgmain-component"></app-img-main> -->
+    </router-outlet> 
 
-  <div class="imgMain">
-    <div class="carousel hide-on-small-only">
-      <a class="carousel-item" href="#one!"><img src="assets/img/teeth.png"></a>
-      <a class="carousel-item" href="#two!"><img src="assets/img/toothbrush.jpg"></a>
-      <a class="carousel-item" href="#three!"><img src="assets/img/ortodontist.jpg"></a>
-      <a class="carousel-item" href="#four!"><img src="assets/img/chair.jpg"></a>
-    </div>
-
-    <div class="img-mobile hide-on-med-and-up">
-        <img src="assets/img/teeth.png">
-        <img src="assets/img/toothbrush.jpg">
-        <img src="assets/img/ortodontist.jpg">
-        <img src="assets/img/chair.jpg">
-    </div>
-  </div>
-
-  <div class="footer">
-    <div class="direccion-container">
-      <span class="data-text no-margin">
-        Guayacanes
-      </span>
-      <span class="data-text">
-        Calle 65 A # 23B-15
-      </span>
-      <span class="data-text no-margin">
-        <i class="material-icons">call</i>
-        8876623-8877501
-      </span>
-    </div>
-    <div class="redes-container" >
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-twitter"></a>
-      </div>
-      
-   
+  <app-footer class="appfooter-component"></app-footer>
 </div>
-
-<router-outlet></router-outlet>

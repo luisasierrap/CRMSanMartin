@@ -1,0 +1,93 @@
+<div class="TableView">
+  <table class="highlight responsive-table table1">
+    <thead>
+      <tr>
+        <th># Cita</th>
+        <th>Nombre Paciente</th>
+        <th>Odontólogo</th>
+        <th>Fecha</th>
+        <th>Hora</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let data of lista_de_citas">
+        <td>{{data.idcita}}</td>
+        <td>{{data.nombreOdontologo}}</td>
+        <td>{{data.nombrePaciente}}</td>
+        <td>{{data.fecha}}</td>
+        <td>{{data.hora}}</td>
+        <td>
+          <button (click)="dataToModal(data)" data-target="modal1"
+            class="btn-floating btn-large waves-effect waves-light btn modal-trigger btnMargin">
+            <i class="material-icons">edit</i>
+          </button>
+          <button data-target="modal2"
+              class="btn-floating btn-large waves-effect waves-light btn "><i
+              class="material-icons">delete</i>
+          </button>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+  <div>
+    <a [routerLink]="[ '../anadirCita']" class="btn-floating btn-large waves-effect waves-light btnadd"><i
+        class="material-icons">add</i></a>
+  </div>
+</div>
+
+<!-- MODAL MODIFICAR CITA -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <h4>Modificar Cita</h4>
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s6">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="icon_prefix" type="text" class="validate" [(ngModel)]="cita.nombrePaciente"
+              [ngModelOptions]="{standalone: true}" disabled>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <input [(ngModel)]="cita.fecha" type="text" id="fecha_up" class="datepicker validate"
+              [ngModelOptions]="{standalone: true}" >
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+              <input [(ngModel)]="cita.hora" type="text" id="hora_up" class="timepicker validate" 
+              [ngModelOptions]="{standalone: true}" name="first">
+            </div>
+            <div class="input-field col s6">
+              <select class="browser-default" [(ngModel)]="cita.IDOdontologo" [ngModelOptions]="{standalone: true}">
+                <option value="0" disabled selected>Seleccione Odontólogo</option>
+                <option *ngFor="let odontologo_ of opcionesOdontologo" value="{{odontologo_.idodontologo}}" >{{odontologo_.nombreOdontologo}}</option>
+              </select>
+            </div>
+          </div>
+      </form>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a class="modal-close waves-effect waves-green btn-flat" (click)="actualizarCita(cita)">Actualizar</a>
+    <a class="modal-close waves-effect waves-green btn-flat" data-dismiss="modal">Cancelar</a>
+  </div>
+</div>
+
+
+<!-- MODAL ELIMINAR CITA -->
+
+<div id="modal2" class="modal">
+    <div class="modal-content">
+      <h4>EliminarCita</h4>
+      <p>¿Está seguro que desea eliminar esta cita?</p>
+    </div>
+    <div class="modal-footer">
+        <a class="modal-close waves-effect waves-green btn-flat" (click)="eliminarCita()">Eliminar</a>
+        <a class="modal-close waves-effect waves-green btn-flat" data-dismiss="modal">Cancelar</a>
+    </div>
+  </div>

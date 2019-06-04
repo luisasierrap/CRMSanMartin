@@ -1,0 +1,23 @@
+.card{
+    display: flex;
+    flex-direction: row;
+    margin-top:5%;
+    background-color: transparent;
+    justify-content:space-between;
+}
+
+.card1{
+    display:flex;
+    flex-direction: column;
+    background-color:#ffff;
+    width:20%;
+    height: 20%;
+    margin-left: 10%;
+}
+
+
+@media only screen and (max-width:420px){
+    .card{
+        width: 100%;
+    }
+}

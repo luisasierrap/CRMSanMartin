@@ -1,0 +1,23 @@
+.TableView{
+    display: flex; 
+    background-color:#ffffff;
+    margin-top: 5%;
+    margin-bottom: 12%;
+    height: 100%;
+    width:100%
+}
+
+.btnadd{
+    background-color: #09448df5;
+    position: absolute;
+    right: 3%;
+    top:68%
+}
+
+.btn{
+    background-color: #09448df5;
+}
+
+.btnMargin{
+    right: 3%;
+}
