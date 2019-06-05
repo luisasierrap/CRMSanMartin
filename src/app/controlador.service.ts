@@ -10,36 +10,52 @@ import { UseExistingWebDriver } from 'protractor/built/driverProviders';
 })
 export class ControladorService {
 
-  constructor(private httpclient: HttpClient) {}
+  constructor(private httpclient: HttpClient) { }
 
-  public crearCita(datosCita: Cita): Observable<Cita> { 
+  public crearCita(datosCita: Cita): Observable<Cita> {
     return new Observable<Cita>((observer) => {
-      this.httpclient.post(environment.backEndBasedURL+"/crearCita", datosCita)
-      .subscribe(
-        (savedCita: Cita) => {
-          savedCita = datosCita
-          observer.next(savedCita);
-        },
-        (err)=> {
-          observer.error("Error guardando" + err)
-        }
-      ) 
+      this.httpclient.post(environment.backEndBasedURL + "/crearCita", datosCita)
+        .subscribe(
+          (savedCita: Cita) => {
+            savedCita = datosCita
+            observer.next(savedCita);
+          },
+          (err) => {
+            observer.error("Error guardando" + err)
+          }
+        )
     })
-  } 
+  }
 
-  public actualizarCita(data: Cita): Observable<Cita>{
-    console.log(data)
+  public actualizarCita(data: Cita): Observable<Cita> {
+    
     return new Observable<Cita>((observer) => {
-      this.httpclient.post(environment.backEndBasedURL+"/actualizarCita", data)
-      .subscribe(
-        (updateCita: Cita) => {
-          updateCita = data
-          observer.next(updateCita);
-        },
-        (err)=> {
-          observer.error("Error guardando" + err)
-        }
-      ) 
+      this.httpclient.post(environment.backEndBasedURL + "/actualizarCita", data)
+        .subscribe(
+          (updateCita: Cita) => {
+            updateCita = data
+            observer.next(updateCita);
+          },
+          (err) => {
+            observer.error("Error guardando" + err)
+          }
+        )
+    })
+  }
+
+  public eliminarCita(data) {
+    console.log(data)
+    return new Observable((observer) => {
+      this.httpclient.post(environment.backEndBasedURL + "/eliminarCita", data)
+        .subscribe(
+          (updateCita) => {
+            updateCita = data
+            observer.next(updateCita);
+          },
+          (err) => {
+            observer.error("Error guardando" + err)
+          }
+        )
     })
   }
 }

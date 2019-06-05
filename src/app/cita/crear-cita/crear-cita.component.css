@@ -1,10 +1,10 @@
 .TableView{
     display: flex; 
     background-color:#ffffff;
-    margin-top: 5%;
-    margin-bottom: 12%;
-    height: 100%;
-    width:100%
+    margin-top: 3%;
+    height: 80%;
+    width:100;
+    overflow:auto;
 }
 
 .btnadd{

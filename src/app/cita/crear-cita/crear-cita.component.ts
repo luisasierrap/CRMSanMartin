@@ -50,16 +50,17 @@ export class CrearCitaComponent implements OnInit {
     document.addEventListener('DOMContentLoaded', function() {
       var elems = document.querySelectorAll('.modal');
       var instances = M.Modal.init(elems, {});
-    });
-  
+    }); 
+    
   } 
   dataToModal(data: Cita){
       this.cita = data;
-      console.log(data)
   }
 
+  datatoDelete(data: Cita){
+    this.cita = data;
+  }
   actualizarCita(data){
-      // console.log(data)
       var selectf= document.getElementById('fecha_up');
       var instancesselect = M.Datepicker.getInstance(selectf);
       this.cita.Fecha=instancesselect.toString();
@@ -71,6 +72,11 @@ export class CrearCitaComponent implements OnInit {
       this.controlador.actualizarCita(this.cita).subscribe(observer=>
         {alert(observer)})
   }
+  eliminarCita(data){ 
+    this.controlador.eliminarCita(data).subscribe(observer=>
+      {alert(observer)})
+  }
+
 }
 
 

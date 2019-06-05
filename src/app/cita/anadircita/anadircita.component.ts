@@ -52,8 +52,7 @@ export class AnadircitaComponent implements OnInit {
     });
   }
 
-  guardarCita()
-  { 
+  guardarCita(){ 
     var selectf= document.getElementById('fecha');
     var instancesselect = M.Datepicker.getInstance(selectf);
     this.cita.Fecha=instancesselect.toString();
